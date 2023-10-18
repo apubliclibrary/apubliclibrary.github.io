@@ -7,10 +7,10 @@ $header-font-family: 'Archivo Black', sans-serif;
 $monospace:         'Cutive Mono', monospace;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 1 !default;
 $base-line-height: 1.3 !default;
-$title-font-size:  $base-font-size * 1.3;
 $body-font-size:   clamp(1rem, 4vw, 2.5rem);
+$title-font-size:  clamp(1rem, 4vw, 1.2rem);
+$small-font-size:  clamp(.5rem, 3vw, 1rem);
 
 $spacing-unit:     30px !default;
 
@@ -134,8 +134,7 @@ section.program-list {
    font-weight: normal;
    width: 53%;
    font-size: $title-font-size;
-   letter-spacing: .02em;
-   margin-bottom: 1.5em;
+   margin-bottom: 2em;
    a {
     text-decoration: none;
    }
@@ -146,13 +145,14 @@ section.program-list {
    margin-left: 3em;
    font-size: $small-font-size;
    text-decoration: none;
+   letter-spacing: .02em;
   }
   a.post-link-find-out:hover {
    color:$hover;
   }
   p.excerpt {
    font-size: $body-font-size;
-   margin: .5em 0em 1em 0em; 
+   margin: 1em 0em 1em 0em; 
    padding-right: .5em;
   }
  }
@@ -167,7 +167,7 @@ article.post {
    font-weight: normal;
    font-size: $title-font-size;
    width: 55%;
-   
+   letter-spacing: .02em;
   }
   .post-meta{
    time {
