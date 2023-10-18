@@ -1,0 +1,231 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+$base-font-family: 'Cardo', Georgia, serif, !default;
+$header-font-family: 'Archivo Black', sans-serif;
+$monospace:         'Cutive Mono', monospace;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 1 !default;
+$base-line-height: 1.3 !default;
+$title-font-size:  $base-font-size * 1.3;
+$body-font-size:   clamp(1rem, 4vw, 2.5rem);
+
+$spacing-unit:     30px !default;
+
+$blue:             #1a3ce7 !default; 
+$text-color:       $blue !default;
+$background-color: #f2f2f2 !default;
+$brand-color:      $blue !default;
+$hover:             #000 !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$table-text-align: left !default;
+
+// Width of the content area
+$content-width:    950px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "minima/base",
+  "minima/layout",
+  "minima/syntax-highlighting"
+;
+
+// Overrides
+
+// Typography
+
+a {
+ text-decoration: underline;
+ &:hover {
+   color:$hover;
+ }
+}
+
+p {
+ font-feature-settings: "liga", "dlig";
+}
+
+
+// Header
+
+.site-header {
+ border:none;
+ position: relative;
+ font-family: $header-font-family;
+ font-weight: normal;
+ min-height: 0;
+ margin: 2em 0 3em 0em;
+
+
+ .site-title, .site-title:visited{
+   text-decoration: none;
+   color: $blue;
+   font-weight: normal;
+   line-height: 1.2em;
+   letter-spacing: .02em;
+   font-size: $title-font-size;
+   &:hover {
+     color:$hover;
+   }
+ }
+ .wrapper {
+  width: 100%;
+  max-width: 100%;
+ }
+}
+
+// Homepage
+
+section.home-wrapper {
+ font-size: $body-font-size;
+  p {
+   text-indent: 2rem;
+   margin-bottom: 0;
+  }
+}
+
+section.home-wrapper p:first-child {
+ text-indent: 0;
+ margin-top: 2em;
+}
+
+section.program-list {
+ margin-top: 7em;
+ h2 {
+  font-family: $header-font-family;
+  font-weight: normal;
+  margin-bottom: 2em;
+  font-size: $title-font-size;
+  letter-spacing: .02em;
+ }
+ ul {
+  margin-left: 0em;
+  li {
+   margin-top:7em;
+  }
+  h3 {
+   font-family: $header-font-family;
+   font-weight: normal;
+   width: 53%;
+   font-size: $title-font-size;
+   letter-spacing: .02em;
+   margin-bottom: 1.5em;
+   a {
+    text-decoration: none;
+   }
+  }
+  span.post-meta, a.post-link-find-out {
+   font-family: $monospace;
+   color: $text-color;
+   margin-left: 3em;
+   font-size: $small-font-size;
+   text-decoration: none;
+  }
+  a.post-link-find-out:hover {
+   color:$hover;
+  }
+  p.excerpt {
+   font-size: $body-font-size;
+   margin: .5em 0em 1em 0em; 
+   padding-right: .5em;
+  }
+ }
+}
+
+// Posts
+
+article.post {
+ header.post-header {
+  .post-title {
+   font-family: $header-font-family;
+   font-weight: normal;
+   font-size: $title-font-size;
+   width: 55%;
+   
+  }
+  .post-meta{
+   time {
+    font-family: $monospace;
+    color: $text-color;
+   }
+  }
+ }
+ .post-content {
+  font-size: $body-font-size;
+  margin-left:1em;
+  figure {
+   margin:1em 0 1em 0;
+   > img {
+    width: 100%;
+   }
+   + p {
+    text-indent: 0;
+   }
+  }
+  p {
+   text-indent: 2rem;
+   margin-bottom: 0;
+  }
+  hr {
+   margin: 1em 0;
+   width:10px;
+   text-align: center;
+   border:1px solid $blue;
+   + p {
+    text-indent: 0;
+   }
+  }
+  h3 {
+   font-family: $header-font-family;
+   font-weight: normal;
+   font-size: $title-font-size;
+   + p {
+    text-indent: 0;
+   }
+  }
+ }
+ 
+}
+
+// Mobile resets
+
+@include media-query($on-palm) {
+ section.program-list ul {
+  margin-left: 0;
+  li {
+   margin-top:3em;
+   h3 {
+    width: 100%;
+   }
+  }
+ } 
+ article.post .post-content {
+  margin-left:0;
+ }
+}
