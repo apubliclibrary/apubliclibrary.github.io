@@ -5,7 +5,7 @@ excerpt: "The class will discuss a selection of screenings and texts about Sun R
 layout: post
 ---
 
-{% include figure.html file="Screen-Shot-2015-03-09-at-18.39.49-PM.png" alt="Cosmic Tones for Mental Therapy." caption="Cosmic Tones for Mental Therapy." %}
+{% include figure.html file="Sun-Ra-Cosmic-Tones-for-Mental-Therapy-L730182203622.jpg" alt="Cosmic Tones for Mental Therapy." caption="Cosmic Tones for Mental Therapy, Sun Ra and his Myth Science Arkestra, 1967." %}
 
 The Public School Berlin will be holding a three-week long class called [Cosmic Tones for Mental Therapy](http://thepublicschool.org/node/38436). The class will discuss a selection of screenings and texts about Sun Ra and Afrofuturism.
 
