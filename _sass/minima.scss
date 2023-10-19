@@ -58,6 +58,8 @@ $on-laptop:        800px !default;
 
 // Overrides
 
+
+
 // Typography
 
 a {
@@ -95,8 +97,8 @@ p {
    }
  }
  .wrapper {
-  width: 100%;
   max-width: 100%;
+  padding-right: 0;
  }
 }
 
@@ -108,33 +110,36 @@ section.home-wrapper {
    text-indent: 2rem;
    margin-bottom: 0;
   }
+  .deutsch {
+   margin-top: 2em;
+  }
 }
 
 section.home-wrapper p:first-child {
  text-indent: 0;
- margin-top: 2em;
+ margin-top: 0em;
 }
 
 section.program-list {
- margin-top: 7em;
+ margin-top: 5em;
  h2 {
   font-family: $header-font-family;
   font-weight: normal;
-  margin-bottom: 2em;
+  margin-bottom: 0em;
   font-size: $title-font-size;
   letter-spacing: .02em;
  }
  ul {
   margin-left: 0em;
   li {
-   margin-top:7em;
+   margin-top:4em;
   }
   h3 {
    font-family: $header-font-family;
    font-weight: normal;
-   width: 53%;
+   width: 50%;
    font-size: $title-font-size;
-   margin-bottom: 2em;
+   margin-bottom: 1.5em;
    a {
     text-decoration: none;
    }
@@ -152,7 +157,7 @@ section.program-list {
   }
   p.excerpt {
    font-size: $body-font-size;
-   margin: 1em 0em 1em 0em; 
+   margin: .5em 0em .5em 0em; 
    padding-right: .5em;
   }
  }
