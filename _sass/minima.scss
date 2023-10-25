@@ -113,6 +113,19 @@ section.home-wrapper {
   .deutsch {
    margin-top: 2em;
   }
+  figure {
+   margin:1em 0 1em 0;
+   > img {
+    width: 100%;
+   }
+   figcaption {
+    font-family: $monospace;
+    font-size: $small-font-size;
+   }
+   + p {
+    text-indent: 0;
+   }
+  }  
 }
 
 section.home-wrapper p:first-child {
@@ -167,27 +180,33 @@ section.program-list {
 
 article.post {
  header.post-header {
-  .post-title {
+  h1.post-title {
    font-family: $header-font-family;
    font-weight: normal;
    font-size: $title-font-size;
    width: 55%;
    letter-spacing: .02em;
-  }
-  .post-meta{
-   time {
-    font-family: $monospace;
-    color: $text-color;
-   }
+   margin-bottom: 1.5em;
   }
  }
  .post-content {
   font-size: $body-font-size;
   margin-left:1em;
+  .post-meta{
+   text-indent: 0;
+   time {
+    font-family: $monospace;
+    color: $text-color; 
+   }
+  }
   figure {
    margin:1em 0 1em 0;
    > img {
     width: 100%;
+   }
+   figcaption {
+    font-family: $monospace;
+    font-size: $small-font-size;
    }
    + p {
     text-indent: 0;
